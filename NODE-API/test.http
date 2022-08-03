@@ -1,0 +1,29 @@
+###Get all product details
+GET http://localhost:4000/api/products HTTP/1.1
+
+### get Single product request
+GET  http://localhost:4000/api/products/6284a92d738bdab52a718b34 HTTP/1.1
+
+### Add new Items
+POST http://localhost:4000/api/products HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "title":"Google Pixel 6A",
+    "price":"₹ 34,790",
+    "image":"https://www.91-img.com/pictures/148242-v3-google-pixel-6a-mobile-phone-medium-1.jpg?tr=q-80",
+    "details":"Octa core (2.8 GHz, Dual Core + 2.25 GHz, Dual core + 1.8 GHz, Quad core) Tensor 6 GB RAM"
+}
+
+
+### Update the item
+PUT  http://localhost:4000/api/products/6284a92d738bdab52a718b34 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title":"Google Pixel 6A Upgrade: Upcomming"
+}
+
+### Delete product
+DELETE http://localhost:4000/api/products/6283f896c5a1c09691c92957 HTTP/1.1
